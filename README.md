@@ -1,6 +1,6 @@
 # Wiziq
 
-A library to access [wiziq](http://developer.wiziq.com/) REST api.
+A library to access [wiziq](http://developer.wiziq.com/) REST api.(only classes for now)
 
 ## Installation
 
