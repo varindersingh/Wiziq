@@ -19,6 +19,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.add_dependency 'nokogiri', '~> 1.6'
   spec.add_runtime_dependency 'faraday', '~> 0.9'
-  spec.add_runtime_dependency 'tzinfo', '~> 1.0'
+  spec.add_runtime_dependency 'active_support', '~> 3.0' ,'<= 4.0'
   spec.add_development_dependency "rake"
 end
