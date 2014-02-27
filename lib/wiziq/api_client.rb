@@ -1,6 +1,5 @@
 require 'wiziq/base'
 require 'wiziq/response_parser'
-require 'date'
 
 module Wiziq
 	class ApiClient < Wiziq::Base
@@ -24,6 +23,7 @@ module Wiziq
 		end
 
 		def modify
+
 
 		end
 

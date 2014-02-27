@@ -9,7 +9,8 @@ module Wiziq
 		
 		def initialize(access_key,secret_key)
 			@secret_key = secret_key
-			@access_key = access_key			
+			@access_key = access_key
+			@timestamp = Time.now.to_i			
 		end
 
 		def get_signature_digest()			
@@ -18,7 +19,7 @@ module Wiziq
 		end
 
 		def get_auth_params(method)
-			@timestamp = Time.now.to_i			
+					
 			@method = method
 			{				
 				"access_key" => @access_key,
@@ -28,13 +29,9 @@ module Wiziq
 		end
 	
 		def get_signature_base()
-			#params_hash.to_a.map { |k,v| "#{ k }=#{ v }"}.join("&")
-
-			s="access_key=#{ @access_key }&timestamp=#{ @timestamp }&method=#{ @method }"
-			puts "get_signature_base =  #{s.inspect}"
-			s
+			 
+			"access_key=#{ @access_key }&timestamp=#{ @timestamp }&method=#{ @method }"			
+			
 		end
-		
-		
 	end
 end
