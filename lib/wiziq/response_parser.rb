@@ -9,7 +9,7 @@ module Wiziq
 			@xml = xml
 			@doc = Nokogiri::XML(xml)
 			@response = {}
-			if @doc.xpath('/rsp').attr('status').value == 'fail'
+			if !response_success?
 				
 				error_node = @doc.xpath('/rsp/error')
 				code = error_node.attr('code').value
@@ -60,6 +60,12 @@ module Wiziq
 
 		def testm
 			{}.methods
+		end
+
+		private
+
+		def response_success?
+			@doc.xpath('/rsp').attr('status').value == 'ok'
 		end
 
 	end

@@ -22,7 +22,7 @@ Or install it yourself as:
 You need to get `access_key` and `secret_key` from [wiziq](http://wiziq.com).[Register](http://www.wiziq.com/api/) to get your api keys.
 
 ```ruby
-client = Wiziq::REST::Client.new do |config|
+client = Wiziq::ApiClient.new do |config|
   config.access_key   = "YOUR_ACCESS_KEY"
   config.secret_key   = "YOUR_SECRET_KEY"   
 end
