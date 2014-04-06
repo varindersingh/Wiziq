@@ -1,5 +1,8 @@
 # Wiziq
 
+Note: (Work in Progress.Gem is not yet finished)
+
+
 A library to access [wiziq](http://developer.wiziq.com/) REST api(currenly classes).
 
 ## Installation
